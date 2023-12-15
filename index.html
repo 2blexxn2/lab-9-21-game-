@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style21.css">
+    <title>Гра «21»</title>
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/flexslider.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+<!-- 		<link rel="stylesheet" href="css/spectre.min.css">
+<link rel="stylesheet" href="css/spectre-exp.min.css">
+<link rel="stylesheet" href="css/spectre-icons.min.css"> -->
+	
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="fh5co-loader"></div>
+	
+	<div id="fh5co-page">
+		<section id="fh5co-header">
+			<div class="container">
+				<nav role="navigation">
+					<ul class="pull-left left-menu">
+						<li><a href="">Home</a></li>
+						<li><a href="">Platform</a></li>
+						<li><a href="">Library</a></li>
+					</ul>
+					<h1 id="fh5co-logo"><a href="">GameGlow</a></h1>
+					<ul class="pull-right right-menu">
+						<!-- <li><a href="#">Login</a></li>
+						<li class="fh5co-cta-btn"><a href="#">Sign up</a></li> -->
+					</ul>
+				</nav>
+			</div>
+			
+		</section>
+
+
+		<section id="fh5co-hero" class="js-fullheight" style="background-image: url(images/bg2.jpg);" data-next="yes">
+			<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="fh5co-intro js-fullheight">
+					<div class="fh5co-intro-text">
+						<div class="fh5co-left-position">
+						<!-- 	<div class="c-not-allowed"></div> -->
+							<h2 class="animate-box">Гра "21"</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-learn-more animate-box">
+				<a href="#" class="scroll-btn">
+					<span class="text">грати</span>
+					<span class="arrow"><i class="icon-chevron-down"></i></span>
+		<!-- 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+</svg> -->
+				</a>
+			</div>
+			
+		</section>
+		<section id="fh5co-features-2">
+			<div class="container">
+				<div class="col-md-6 col-md-push-6">
+					<figure class="fh5co-feature-image animate-box">
+						<img src="images/macbook.png" alt="page macbook">
+					</figure>
+				</div>
+				<div class="col-md-6 col-md-pull-6">
+					<span class="fh5co-label animate-box">Як грати?</span>
+					<h2 class="fh5co-lead animate-box">21</h2>
+					<section id="container-card">
+						<div class="player-col">
+							<div id="user-name" class="player-name">User</div>
+							<div id="user-current-card" class="current-card"></div>
+							<div id="user-score" class="player-score">0</div>
+						</div>
+						<!-- <div class="bonus"></div> -->
+						<div class="control-panel-col">
+							<div id="game-status" class="status-label">Start</div>
+							<button id="button">Generate</button>
+						</div>
+						<div class="player-col">
+							<div id="computer-name" class="player-name">Computer</div>
+							<div id="computer-current-card" class="current-card"></div>
+							<div id="computer-score" class="player-score">0</div>
+						</div>
+					</section>
+					
+				</div>
+			</div>
+		</section>
+		
+		<script src="js/jquery.min.js"></script>
+
+		<script src="js/jquery.easing.1.3.js"></script>
+	
+		<script src="js/bootstrap.min.js"></script>
+	
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+	
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+	
+	
+		<script src="js/jquery.style.switcher.js"></script>
+		<script>
+			
+			$(function(){
+				$('#colour-variations ul').styleSwitcher({
+					defaultThemeId: 'theme-switch',
+					hasPreview: false,
+					cookie: {
+									expires: 30,
+									isManagingLoad: true
+							}
+				});	
+				$('.option-toggle').click(function() {
+					$('#colour-variations').toggleClass('sleep');
+				});
+			});
+		</script>
+	
+		<script src="js/main.js"></script>
+	
+		<script src="js/jquery.cookie.js"></script>
+		<script>
+			$(function(){
+	
+				if ( $.cookie('layoutCookie') != '' ) {
+					$('body').addClass($.cookie('layoutCookie'));
+				}
+	
+				$('a[data-layout="boxed"]').click(function(event){
+					event.preventDefault();
+					$.cookie('layoutCookie', 'boxed', { expires: 7, path: '/'});
+					$('body').addClass($.cookie('layoutCookie')); 
+				});
+	
+			document.oncontextmenu = function(e) {
+			var target = (typeof e !="undefined")? e.target: event.srcElement;
+			if (target.tagName == "IMG") {
+					return false;
+			}
+	};
+				$('a[data-layout="wide"]').click(function(event){
+					event.preventDefault();
+					$('body').removeClass($.cookie('layoutCookie')); 
+					$.removeCookie('layoutCookie', { path: '/' }); 
+				});
+			});
+		</script>
+		
+
+</body>
+</html>
